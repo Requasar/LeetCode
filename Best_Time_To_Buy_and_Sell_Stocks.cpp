@@ -18,7 +18,7 @@ public:
                 if(prices[i] > high)
                     high = prices[i];
             }
-            if( high - check > result)
+            if( high - check > result) // this part is for if we found better option before we save that value into result
                 result = high -check;
         }
         if(result > 0)
