@@ -14,5 +14,11 @@ public:
         }
         return nums[size-1];
         
+        /* best solution with XOR 
+        int ans=0;
+	   for(auto x:nums)
+	   ans^=x;
+	   return ans;
+       */
     }
 };
