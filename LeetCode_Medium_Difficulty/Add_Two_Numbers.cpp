@@ -16,7 +16,7 @@ public:
         ListNode *curr = result;
         while(l1 != nullptr || l2 != nullptr)
         {
-            int sum = a + (l1 ? l1->val : 0) + (l2 ? l2->val : 0); //checking l1 and l2 nullptr or not before adding
+            int sum = a + (l1 ? l1->val : 0) + (l2 ? l2->val : 0); //checking l1 and l2 nullptr or not before adding.
 
             if (sum >= 10) {
                 curr->val = sum - 10; // if there is a carry situation.
