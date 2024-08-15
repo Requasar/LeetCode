@@ -1,0 +1,26 @@
+class Solution {
+public:
+    string convert(string s, int numRows) {
+        //unordered_set<char,int> zigzag;
+        vector<string> zig (numRows, "");
+        size_t size = s.size();
+        string result;
+        if(numRows <= 1)
+            return s;
+        int j =0, dir = -1;
+        for(int i = 0; i<size; i++)
+        {
+            if(j == numRows - 1 || j == 0) 
+                dir *= (-1); // our direction
+            zig[j] += s[i];
+
+            if(dir == 1) 
+                j++;
+            else 
+                j--;
+        }
+        for(auto &it : zig)
+            result += it; 
+        return result;
+    }
+};
